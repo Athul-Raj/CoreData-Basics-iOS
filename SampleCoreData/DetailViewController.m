@@ -44,6 +44,7 @@ extern NSNumber *rownumber;
     [request setSortDescriptors:@[sortDescriptor]];
     _items = [context executeFetchRequest:request error:nil];
     _detailLabel.text = [[_items objectAtIndex:(NSUInteger)rownumber]name];
+    _priceLabel.text = [[[_items objectAtIndex:(NSUInteger)rownumber]price]stringValue];
     
     NSFetchRequest *req = [[NSFetchRequest alloc]initWithEntityName:@"Type"];
     _type = [context executeFetchRequest:req error:nil];

@@ -12,5 +12,6 @@
 @property (weak, nonatomic) IBOutlet UILabel *detailLabel;
 - (IBAction)deleteAction:(id)sender;
 @property (strong, nonatomic) IBOutlet UILabel *typeLabel;
+@property (strong, nonatomic) IBOutlet UILabel *priceLabel;
 
 @end
