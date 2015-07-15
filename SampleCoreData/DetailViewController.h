@@ -11,5 +11,6 @@
 @interface DetailViewController : UIViewController
 @property (weak, nonatomic) IBOutlet UILabel *detailLabel;
 - (IBAction)deleteAction:(id)sender;
+@property (strong, nonatomic) IBOutlet UILabel *typeLabel;
 
 @end

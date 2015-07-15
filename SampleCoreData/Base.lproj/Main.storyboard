@@ -17,12 +17,12 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="VcL-mg-Cwp">
-                                <rect key="frame" x="112" y="153" width="97" height="30"/>
+                                <rect key="frame" x="112" y="81" width="97" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="JxB-61-rMB">
-                                <rect key="frame" x="112" y="240" width="97" height="30"/>
+                                <rect key="frame" x="112" y="292" width="97" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
@@ -36,6 +36,9 @@
                                     <segue destination="FIL-yN-zVw" kind="unwind" unwindAction="unwindSave:" id="jI8-Ml-BtC"/>
                                 </connections>
                             </button>
+                            <pickerView contentMode="scaleAspectFit" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="6Mq-QX-ai0">
+                                <rect key="frame" x="12" y="119" width="296" height="162"/>
+                            </pickerView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
@@ -44,6 +47,7 @@
                     <simulatedScreenMetrics key="simulatedDestinationMetrics"/>
                     <connections>
                         <outlet property="nameText" destination="VcL-mg-Cwp" id="3tN-l7-QgL"/>
+                        <outlet property="option" destination="6Mq-QX-ai0" id="b2S-w1-OaM"/>
                         <outlet property="priceText" destination="JxB-61-rMB" id="Brd-7K-95s"/>
                         <outlet property="save" destination="X1l-3r-58N" id="ySB-Pj-WE6"/>
                     </connections>
@@ -51,7 +55,7 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
                 <exit id="FIL-yN-zVw" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="1938" y="369"/>
+            <point key="canvasLocation" x="1938" y="364"/>
         </scene>
         <!--Detail View Controller-->
         <scene sceneID="xUq-HB-Zjc">
@@ -81,12 +85,19 @@
                                     <segue destination="TZ1-FA-G7t" kind="unwind" unwindAction="unwindDelete:" id="fMY-TA-V7I"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pBV-KE-EFV">
+                                <rect key="frame" x="104" y="246" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics"/>
                     <connections>
                         <outlet property="detailLabel" destination="dqb-KT-HMS" id="iMJ-uG-Ck1"/>
+                        <outlet property="typeLabel" destination="pBV-KE-EFV" id="FBf-m9-l7p"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2xP-FL-mta" userLabel="First Responder" sceneMemberID="firstResponder"/>

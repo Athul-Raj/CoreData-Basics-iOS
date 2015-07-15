@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C4C725CC1B552A550070944A /* Type.m in Sources */ = {isa = PBXBuildFile; fileRef = C4C725CB1B552A550070944A /* Type.m */; };
 		C4D8393B1B3BFFA500F53304 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = C4D8393A1B3BFFA500F53304 /* main.m */; };
 		C4D8393E1B3BFFA500F53304 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C4D8393D1B3BFFA500F53304 /* AppDelegate.m */; };
 		C4D839441B3BFFA500F53304 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C4D839431B3BFFA500F53304 /* ViewController.m */; };
@@ -32,6 +33,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		C4C725CA1B552A550070944A /* Type.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Type.h; sourceTree = "<group>"; };
+		C4C725CB1B552A550070944A /* Type.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Type.m; sourceTree = "<group>"; };
 		C4D839351B3BFFA500F53304 /* SampleCoreData.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SampleCoreData.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C4D839391B3BFFA500F53304 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C4D8393A1B3BFFA500F53304 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -108,6 +111,8 @@
 				C4D839481B3BFFA500F53304 /* Images.xcassets */,
 				C4D8394A1B3BFFA500F53304 /* LaunchScreen.xib */,
 				C4E19F291B550BFF00BEC8F1 /* SampleCoreData.xcdatamodeld */,
+				C4C725CA1B552A550070944A /* Type.h */,
+				C4C725CB1B552A550070944A /* Type.m */,
 				C4DAD6481B3D43F7007A072B /* Product.h */,
 				C4DAD6491B3D43F7007A072B /* Product.m */,
 				C4D839381B3BFFA500F53304 /* Supporting Files */,
@@ -244,6 +249,7 @@
 				C4DAD64A1B3D43F7007A072B /* Product.m in Sources */,
 				C4E19F2B1B550BFF00BEC8F1 /* SampleCoreData.xcdatamodeld in Sources */,
 				C4D8393E1B3BFFA500F53304 /* AppDelegate.m in Sources */,
+				C4C725CC1B552A550070944A /* Type.m in Sources */,
 				C4D839441B3BFFA500F53304 /* ViewController.m in Sources */,
 				C4D839661B3C003400F53304 /* TableViewTableViewController.m in Sources */,
 				C4D8393B1B3BFFA500F53304 /* main.m in Sources */,

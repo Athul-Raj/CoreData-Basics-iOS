@@ -4,7 +4,12 @@
         <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="price" optional="YES" attributeType="Integer 64" defaultValueString="0" syncable="YES"/>
     </entity>
+    <entity name="Type" representedClassName="Type" syncable="YES">
+        <attribute name="kind" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="product" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Product" syncable="YES"/>
+    </entity>
     <elements>
         <element name="Product" positionX="-45" positionY="0" width="128" height="75"/>
+        <element name="Type" positionX="189" positionY="9" width="128" height="73"/>
     </elements>
 </model>

@@ -20,6 +20,7 @@ NSManagedObjectContext *context;
 }
 @property Product *pro;
 @property NSArray *items;
+@property NSArray *type;
 @end
 
 @implementation TableViewTableViewController
@@ -59,6 +60,10 @@ _items = [context executeFetchRequest:request error:nil];
     [request setSortDescriptors:@[sd]];
     _items = [context executeFetchRequest:request error:nil];
     NSLog(@"%@",_items);
+    
+    NSFetchRequest *req = [[NSFetchRequest alloc]initWithEntityName:@"Type"];
+    _type = [context executeFetchRequest:req error:nil];
+     NSLog(@"%@",_type);
     [self.tableView reloadData];
     //[self.tableView reloadInputViews];
 }
@@ -68,27 +73,7 @@ _items = [context executeFetchRequest:request error:nil];
 // Dispose of any resources that can be recreated.
 }
 
-/*-(IBAction)unwindSave:(UIStoryboardSegue *)segue{
 
-NSFetchRequest *request = [[NSFetchRequest alloc]initWithEntityName:@"Product"];
-NSSortDescriptor *sd = [[NSSortDescriptor alloc]initWithKey:@"name" ascending:YES];
-[request setSortDescriptors:@[sd]];
-_items = [context executeFetchRequest:request error:nil];
-    NSLog(@"%@",_items);
-[self.tableView reloadData];
-}*/
-
-/*-(IBAction)unwindDelete:(UIStoryboardSegue *)segue{
-
-NSFetchRequest *request = [[NSFetchRequest alloc]initWithEntityName:@"Product"];
-NSSortDescriptor *sd = [[NSSortDescriptor alloc]initWithKey:@"name" ascending:YES];
-[request setSortDescriptors:@[sd]];
-_items = [context executeFetchRequest:request error:nil];
-    [_appDelegate saveContext];
-
-
-[self.tableView reloadData];
-}*/
 #pragma mark - Table view data source
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {

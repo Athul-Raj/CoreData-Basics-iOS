@@ -10,6 +10,8 @@
 #import "Product.h"
 #import "TableViewTableViewController.h"
 #import "AppDelegate.h"
+
+
 extern NSNumber *rownumber;
 @interface DetailViewController (){
     NSManagedObjectContext *context;
@@ -17,6 +19,7 @@ extern NSNumber *rownumber;
 }
 @property Product *pro;
 @property NSArray *items;
+@property NSArray *type;
 
 @end
 
@@ -42,6 +45,12 @@ extern NSNumber *rownumber;
     
     _items = [context executeFetchRequest:request error:nil];
     _detailLabel.text = [[_items objectAtIndex:(NSUInteger)rownumber]name];
+    
+    NSFetchRequest *req = [[NSFetchRequest alloc]initWithEntityName:@"Type"];
+    _type = [context executeFetchRequest:req error:nil];
+ //   _typeLabel.text = [[_type objectAtIndex:<#(NSUInteger)#>rownumber]name];
+    
+
     //NSLog(@"number %d",(int)rownumber);
     //NSLog(@"dert: %@",[[_items objectAtIndex:(NSUInteger)rownumber]name]);
     
@@ -74,7 +83,7 @@ extern NSNumber *rownumber;
     _items = [context executeFetchRequest:request error:nil];
     
     _detailLabel.text = [[_items objectAtIndex:(NSUInteger)rownumber]name];
-    
+
     
     // NSManagedObject *managObj = [[NSManagedObject alloc]init];
     //[managObj a ]
