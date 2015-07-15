@@ -22,7 +22,7 @@
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="JxB-61-rMB">
-                                <rect key="frame" x="112" y="292" width="97" height="30"/>
+                                <rect key="frame" x="112" y="143" width="97" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
@@ -33,11 +33,10 @@
                                 </state>
                                 <connections>
                                     <action selector="saveAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Zav-wQ-oUH"/>
-                                    <segue destination="FIL-yN-zVw" kind="unwind" unwindAction="unwindSave:" id="jI8-Ml-BtC"/>
                                 </connections>
                             </button>
                             <pickerView contentMode="scaleAspectFit" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="6Mq-QX-ai0">
-                                <rect key="frame" x="12" y="119" width="296" height="162"/>
+                                <rect key="frame" x="8" y="167" width="296" height="162"/>
                             </pickerView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
@@ -53,7 +52,6 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
-                <exit id="FIL-yN-zVw" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="1938" y="364"/>
         </scene>
@@ -82,11 +80,10 @@
                                 </state>
                                 <connections>
                                     <action selector="deleteAction:" destination="0ol-wd-fAa" eventType="touchUpInside" id="yhG-eX-pBL"/>
-                                    <segue destination="TZ1-FA-G7t" kind="unwind" unwindAction="unwindDelete:" id="fMY-TA-V7I"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pBV-KE-EFV">
-                                <rect key="frame" x="104" y="246" width="42" height="21"/>
+                                <rect key="frame" x="86" y="246" width="166" height="27"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
@@ -101,7 +98,6 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2xP-FL-mta" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <exit id="TZ1-FA-G7t" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="1938" y="-169"/>
         </scene>

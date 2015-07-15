@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		C4C725CC1B552A550070944A /* Type.m in Sources */ = {isa = PBXBuildFile; fileRef = C4C725CB1B552A550070944A /* Type.m */; };
 		C4D8393B1B3BFFA500F53304 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = C4D8393A1B3BFFA500F53304 /* main.m */; };
 		C4D8393E1B3BFFA500F53304 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C4D8393D1B3BFFA500F53304 /* AppDelegate.m */; };
 		C4D839441B3BFFA500F53304 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C4D839431B3BFFA500F53304 /* ViewController.m */; };
@@ -17,7 +16,8 @@
 		C4D839581B3BFFA500F53304 /* SampleCoreDataTests.m in Sources */ = {isa = PBXBuildFile; fileRef = C4D839571B3BFFA500F53304 /* SampleCoreDataTests.m */; };
 		C4D839661B3C003400F53304 /* TableViewTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C4D839651B3C003400F53304 /* TableViewTableViewController.m */; };
 		C4D8396C1B3C28BF00F53304 /* DetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C4D8396B1B3C28BF00F53304 /* DetailViewController.m */; };
-		C4DAD64A1B3D43F7007A072B /* Product.m in Sources */ = {isa = PBXBuildFile; fileRef = C4DAD6491B3D43F7007A072B /* Product.m */; };
+		C4DB25851B56692700685937 /* Product.m in Sources */ = {isa = PBXBuildFile; fileRef = C4DB25841B56692700685937 /* Product.m */; };
+		C4DB25881B56692800685937 /* Type.m in Sources */ = {isa = PBXBuildFile; fileRef = C4DB25871B56692700685937 /* Type.m */; };
 		C4E19F2B1B550BFF00BEC8F1 /* SampleCoreData.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = C4E19F291B550BFF00BEC8F1 /* SampleCoreData.xcdatamodeld */; };
 		C4E6AEDC1B40FC0500181D76 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C4E6AEDB1B40FC0500181D76 /* CoreData.framework */; };
 /* End PBXBuildFile section */
@@ -33,8 +33,6 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		C4C725CA1B552A550070944A /* Type.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Type.h; sourceTree = "<group>"; };
-		C4C725CB1B552A550070944A /* Type.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Type.m; sourceTree = "<group>"; };
 		C4D839351B3BFFA500F53304 /* SampleCoreData.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SampleCoreData.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C4D839391B3BFFA500F53304 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C4D8393A1B3BFFA500F53304 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -52,8 +50,10 @@
 		C4D839651B3C003400F53304 /* TableViewTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TableViewTableViewController.m; path = ../TableViewTableViewController.m; sourceTree = "<group>"; };
 		C4D8396A1B3C28BF00F53304 /* DetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetailViewController.h; sourceTree = "<group>"; };
 		C4D8396B1B3C28BF00F53304 /* DetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetailViewController.m; sourceTree = "<group>"; };
-		C4DAD6481B3D43F7007A072B /* Product.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Product.h; sourceTree = "<group>"; };
-		C4DAD6491B3D43F7007A072B /* Product.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Product.m; sourceTree = "<group>"; };
+		C4DB25831B56692700685937 /* Product.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Product.h; sourceTree = "<group>"; };
+		C4DB25841B56692700685937 /* Product.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Product.m; sourceTree = "<group>"; };
+		C4DB25861B56692700685937 /* Type.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Type.h; sourceTree = "<group>"; };
+		C4DB25871B56692700685937 /* Type.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Type.m; sourceTree = "<group>"; };
 		C4E19F2A1B550BFF00BEC8F1 /* SampleCoreData.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = SampleCoreData.xcdatamodel; sourceTree = "<group>"; };
 		C4E6AEDB1B40FC0500181D76 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
@@ -111,10 +111,10 @@
 				C4D839481B3BFFA500F53304 /* Images.xcassets */,
 				C4D8394A1B3BFFA500F53304 /* LaunchScreen.xib */,
 				C4E19F291B550BFF00BEC8F1 /* SampleCoreData.xcdatamodeld */,
-				C4C725CA1B552A550070944A /* Type.h */,
-				C4C725CB1B552A550070944A /* Type.m */,
-				C4DAD6481B3D43F7007A072B /* Product.h */,
-				C4DAD6491B3D43F7007A072B /* Product.m */,
+				C4DB25861B56692700685937 /* Type.h */,
+				C4DB25871B56692700685937 /* Type.m */,
+				C4DB25831B56692700685937 /* Product.h */,
+				C4DB25841B56692700685937 /* Product.m */,
 				C4D839381B3BFFA500F53304 /* Supporting Files */,
 			);
 			path = SampleCoreData;
@@ -246,10 +246,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C4DAD64A1B3D43F7007A072B /* Product.m in Sources */,
+				C4DB25851B56692700685937 /* Product.m in Sources */,
 				C4E19F2B1B550BFF00BEC8F1 /* SampleCoreData.xcdatamodeld in Sources */,
 				C4D8393E1B3BFFA500F53304 /* AppDelegate.m in Sources */,
-				C4C725CC1B552A550070944A /* Type.m in Sources */,
+				C4DB25881B56692800685937 /* Type.m in Sources */,
 				C4D839441B3BFFA500F53304 /* ViewController.m in Sources */,
 				C4D839661B3C003400F53304 /* TableViewTableViewController.m in Sources */,
 				C4D8393B1B3BFFA500F53304 /* main.m in Sources */,

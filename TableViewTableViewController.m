@@ -10,11 +10,12 @@
 #import "TableViewTableViewController.h"
 #import "AppDelegate.h"
 #import "ViewController.h"
+#import "Type.h"
 
 NSInteger *rownumber;
 @interface TableViewTableViewController (){
 AppDelegate *_appDelegate;
-// Type *type;
+ Type *typeObj;
 NSManagedObjectContext *context;
     
 }
@@ -59,13 +60,13 @@ _items = [context executeFetchRequest:request error:nil];
     NSSortDescriptor *sd = [[NSSortDescriptor alloc]initWithKey:@"name" ascending:YES];
     [request setSortDescriptors:@[sd]];
     _items = [context executeFetchRequest:request error:nil];
-    NSLog(@"%@",_items);
+
     
     NSFetchRequest *req = [[NSFetchRequest alloc]initWithEntityName:@"Type"];
     _type = [context executeFetchRequest:req error:nil];
-     NSLog(@"%@",_type);
+    
     [self.tableView reloadData];
-    //[self.tableView reloadInputViews];
+
 }
 
 - (void)didReceiveMemoryWarning {

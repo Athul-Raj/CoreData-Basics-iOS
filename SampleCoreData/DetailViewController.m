@@ -42,20 +42,14 @@ extern NSNumber *rownumber;
     NSFetchRequest *request = [[NSFetchRequest alloc]initWithEntityName:@"Product"];
     NSSortDescriptor *sortDescriptor = [[NSSortDescriptor alloc] initWithKey:@"name" ascending:YES];
     [request setSortDescriptors:@[sortDescriptor]];
-    
     _items = [context executeFetchRequest:request error:nil];
     _detailLabel.text = [[_items objectAtIndex:(NSUInteger)rownumber]name];
     
     NSFetchRequest *req = [[NSFetchRequest alloc]initWithEntityName:@"Type"];
     _type = [context executeFetchRequest:req error:nil];
- //   _typeLabel.text = [[_type objectAtIndex:<#(NSUInteger)#>rownumber]name];
+    _typeLabel.text = [[_type objectAtIndex:(NSUInteger)rownumber] kind];
     
 
-    //NSLog(@"number %d",(int)rownumber);
-    //NSLog(@"dert: %@",[[_items objectAtIndex:(NSUInteger)rownumber]name]);
-    
-    
-    // Do any additional setup after loading the view.
 }
 
 - (void)didReceiveMemoryWarning {
@@ -74,20 +68,16 @@ extern NSNumber *rownumber;
  */
 
 - (IBAction)deleteAction:(id)sender {
+    //context = [self managedobjectcontext];
     NSFetchRequest *request = [[NSFetchRequest alloc]initWithEntityName:@"Product"];
     
     NSSortDescriptor *sortDescriptor = [[NSSortDescriptor alloc] initWithKey:@"name" ascending:YES];
     [request setSortDescriptors:@[sortDescriptor]];
-    
-    
-    _items = [context executeFetchRequest:request error:nil];
-    
-    _detailLabel.text = [[_items objectAtIndex:(NSUInteger)rownumber]name];
 
+    [context deleteObject :[_items objectAtIndex:(NSUInteger)rownumber]];
+
+    [context deleteObject:[_type objectAtIndex:(NSUInteger)rownumber]];
     
-    // NSManagedObject *managObj = [[NSManagedObject alloc]init];
-    //[managObj a ]
-    [context deleteObject:[_items objectAtIndex:(NSUInteger)rownumber]];
     _appdelegate=(AppDelegate *)[UIApplication sharedApplication].delegate;
     [_appdelegate saveContext];
      [self.navigationController popToRootViewControllerAnimated:YES];

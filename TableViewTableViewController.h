@@ -10,6 +10,5 @@
 #import "Product.h"
 
 @interface TableViewTableViewController : UITableViewController
--(IBAction)unwindSave:(UIStoryboardSegue *) segue;
--(IBAction)unwindDelete:(UIStoryboardSegue *)segue;
+
 @end

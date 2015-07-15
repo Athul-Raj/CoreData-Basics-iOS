@@ -11,12 +11,12 @@
 #import "Product.h"
 #import "TableViewTableViewController.h"
 #import "Type.h"
+
 @interface ViewController ()
 {
     AppDelegate *_appDelegate;
- 
-   
     NSArray *data;
+    NSString *itemType;
 }
  @property IBOutlet UIPickerView *option;
 @property NSManagedObjectContext *context;
@@ -27,16 +27,16 @@
 @implementation ViewController
 
 - (void)viewDidLoad {
+  
     [super viewDidLoad];
     _appDelegate=(AppDelegate *)[UIApplication sharedApplication].delegate;
-    _context = [_appDelegate managedObjectContext];
     
     data = @[@"Electronic", @"Fashion", @"Beauty",@"Cosmetics" ];
     self.option.delegate = self;
     self.option.dataSource = self;
-    
-    // Do any additional setup after loading the view, typically from a nib.
+
 }
+
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
@@ -45,24 +45,29 @@
 
 
 - (IBAction)saveAction:(id)sender {
+   _context = [_appDelegate managedObjectContext];
+    
     Product *pro = [NSEntityDescription insertNewObjectForEntityForName:@"Product" inManagedObjectContext:_appDelegate.managedObjectContext];
     Type *type = [NSEntityDescription insertNewObjectForEntityForName:@"Type" inManagedObjectContext:_appDelegate.managedObjectContext];
-    //pro.name = _nameText.text;
-    [pro setValue:_nameText.text forKey:@"name"];
 
+    pro.name = _nameText.text;
+    //[pro setValue:_nameText.text forKey:@"name"];
     int numb = [_priceText.text intValue];
     pro.price = [NSNumber numberWithInt: numb];
 
-   
-    //[pro addTypeObject:type];
-    //[_context insertObject:pro];
-    //[type addProduct:pro];
-    
-    [type setValue:pro forKey:@"product"];
+    type.kind = itemType;
+
+    pro.type = type;
     
     [_appDelegate saveContext];
 
+    NSFetchRequest *request = [[NSFetchRequest alloc]initWithEntityName:@"Product"];
+    NSSortDescriptor *sd = [[NSSortDescriptor alloc]initWithKey:@"name" ascending:YES];
+    [request setSortDescriptors:@[sd]];
+    
+    NSArray *temp = [_context executeFetchRequest:request error:nil];
     [self.navigationController popToRootViewControllerAnimated:YES];
+   
 }
 
 // The number of columns of data
@@ -84,8 +89,10 @@
 }
 
 - (void)pickerView:(UIPickerView *)pickerView didSelectRow:(NSInteger)row inComponent:(NSInteger)component{
-    Type *type = [NSEntityDescription insertNewObjectForEntityForName:@"Type" inManagedObjectContext:_appDelegate.managedObjectContext];
-    type.kind = data[row];
+
+    itemType = data[row];
+   // [_context insertObject:type];
+    //[_appDelegate saveContext];
 
 }
 

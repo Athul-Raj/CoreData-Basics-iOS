@@ -2,7 +2,7 @@
 //  Type.m
 //  SampleCoreData
 //
-//  Created by Athul on 14/07/15.
+//  Created by Athul on 15/07/15.
 //  Copyright (c) 2015 Athul. All rights reserved.
 //
 
@@ -12,6 +12,5 @@
 @implementation Type
 
 @dynamic kind;
-@dynamic product;
 
 @end
